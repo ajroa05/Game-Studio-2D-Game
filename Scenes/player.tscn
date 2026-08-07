@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://brmk2cfddhyjv"]
 
+[ext_resource type="Texture2D" uid="uid://dpsinf0hgy1" path="res://assets/graphics/24bit/Ship1.bmp" id="1_v0iea"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f60y1"]
+radius = 35.057095
+
 [node name="Player" type="CharacterBody2D" unique_id=2096378917]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2127235893]
+texture = ExtResource("1_v0iea")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2013712748]
+shape = SubResource("CircleShape2D_f60y1")
