@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cj3yskuiaymnt"]
+
+[ext_resource type="Texture2D" uid="uid://yjh4mpm28s2" path="res://assets/sprites/enemy1/Smoke Explosion_Frame_01.png" id="1_a01ek"]
+[ext_resource type="Script" uid="uid://bfk3skjpb1vq5" path="res://scenes/enemies/enemy1.gd" id="1_jt480"]
+[ext_resource type="Texture2D" uid="uid://cbew65fc2fmhd" path="res://assets/sprites/enemy1/Smoke Explosion_Frame_02.png" id="2_jt480"]
+[ext_resource type="Texture2D" uid="uid://uag74vkqbhhf" path="res://assets/sprites/enemy1/Smoke Explosion_Frame_03.png" id="3_nubyw"]
+[ext_resource type="Texture2D" uid="uid://2ss0wbbu8uda" path="res://assets/sprites/enemy1/Smoke Explosion_Frame_04.png" id="4_xk0ir"]
+[ext_resource type="Texture2D" uid="uid://bwr5ex5di1c8y" path="res://assets/sprites/enemy1/Smoke Explosion_Frame_05.png" id="5_53sgn"]
+[ext_resource type="Texture2D" uid="uid://bm745dj8nrxen" path="res://assets/sprites/enemy1/Smoke Explosion_Frame_06.png" id="6_qmjbw"]
+[ext_resource type="Texture2D" uid="uid://20e8bmyst0jr" path="res://assets/sprites/enemy1/Smoke Explosion_Frame_07.png" id="7_fv7rh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a01ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jt480")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nubyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xk0ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_53sgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qmjbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fv7rh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_13qdw"]
+radius = 115.00435
+
+[node name="Enemy1" type="Node2D" unique_id=1448150388]
+
+[node name="Mob" type="RigidBody2D" parent="." unique_id=1322596568]
+script = ExtResource("1_jt480")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mob" unique_id=1670081419]
+sprite_frames = SubResource("SpriteFrames_xrivr")
+autoplay = "default"
+frame_progress = 0.61795443
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mob" unique_id=789937477]
+position = Vector2(-1, 33)
+shape = SubResource("CircleShape2D_13qdw")
