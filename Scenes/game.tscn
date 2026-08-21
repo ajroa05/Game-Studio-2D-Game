@@ -36,3 +36,5 @@ centered = false
 [node name="Player" parent="." unique_id=2096378917 instance=ExtResource("4_3dryh")]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2070465107]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
